@@ -7,7 +7,7 @@ const Home = () => {
 
     useEffect(() => {
         axios
-            .get('http://localhost:5000/packages')
+            .get('https://travel-hub-a2m5.onrender.com/packages')
             .then((res) => setPackages(res.data))
             .catch((err) => console.error(err));
     }, []);
