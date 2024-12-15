@@ -13,4 +13,7 @@ const bookingSchema = new mongoose.Schema({
     totalPrice: Number,
 });
 
-module.exports = mongoose.model('Booking', bookingSchema);
+// Check if the model already exists in mongoose.models, if it does, use it, otherwise define a new one
+const Booking = mongoose.models.Booking || mongoose.model('Booking', bookingSchema);
+
+module.exports = Booking;

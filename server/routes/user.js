@@ -1,7 +1,6 @@
-// backend/routes/user.js
 const express = require('express');
 const Package = require('../models/Package');
-const Booking = require('../models/Booking');
+const Booking = require('../models/booking');
 
 const router = express.Router();
 
@@ -24,3 +23,19 @@ router.get('/packages/:id', async (req, res) => {
         res.status(500).json(err);
     }
 });
+
+// Book a package
+router.post('/bookings', async (req, res) => {
+    try {
+        const bookingData = req.body;
+        const package = await Package.findById(bookingData.package);
+        const totalPrice = package.price * bookingData.travelers;
+        const booking = new Booking({ ...bookingData, totalPrice });
+        await booking.save();
+        res.status(201).json(booking);
+    } catch (err) {
+        res.status(500).json(err);
+    }
+});
+
+module.exports = router;
