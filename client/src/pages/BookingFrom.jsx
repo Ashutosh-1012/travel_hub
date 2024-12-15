@@ -33,7 +33,7 @@ const BookingForm = () => {
         }
 
         try {
-            const response = await axios.post('http://localhost:5000/bookings', {
+            const response = await axios.post('https://travel-hub-a2m5.onrender.com/bookings', {
                 ...formData,
                 package: id,
             });
