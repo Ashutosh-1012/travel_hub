@@ -1,3 +1,4 @@
+//this is only for hardcoded pushing data to database or backend
 const mongoose = require('mongoose');
 const Package = require('./models/Package');
 
