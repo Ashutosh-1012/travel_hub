@@ -11,7 +11,7 @@ const Invoice = () => {
     useEffect(() => {
         if (!location.state) {
             // If location.state is null, fetch booking details using the ID
-            axios.get(`http://localhost:5000/bookings/${id}`)
+            axios.get(`https://travel-hub-a2m5.onrender.com/bookings/${id}`)
                 .then(response => setBookingDetails(response.data))
                 .catch(error => console.error('Error fetching booking details:', error));
         } else {
