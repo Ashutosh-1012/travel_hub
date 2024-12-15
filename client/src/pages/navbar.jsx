@@ -14,6 +14,12 @@ const Navbar = () => {
                 >
                     Home
                 </button>
+                 <button
+                    onClick={() => navigate('/admin')}
+                    className="bg-blue-700 text-white px-4 py-2 rounded hover:bg-blue-800"
+                >
+                    Admin
+                </button>
             </div>
         </nav>
     );
