@@ -41,36 +41,33 @@ Before you begin, make sure you have the following installed:
    cd booking-app
 
 2. Install dependencies for the frontend and backend:
-   
- # For frontend (React app)
+```bash
+# For frontend (React app)
 cd frontend
 npm install
+```
 
-# For backend (Node.js app)
+```bash
+#For backend (Node.js app)
 cd ../backend
 npm install
+```
 
 
 3. Start the backend server:
-
-
+```bash
 # In the backend directory
 npm start
-Start the frontend server:
-
+```
+4. Start the frontend server:
+```bash
 # In the frontend directory
 npm run dev
-
+```
 Open your browser and navigate to http://localhost:3000 to view the app.
 
-API Endpoints
-GET /bookings/{id}: Retrieve booking details by booking ID.
-POST /bookings: Create a new booking.
-
-# License
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-Make sure to replace `your-username` with your actual GitHub username, and adjust any paths or commands based on your actual project structure. Let me know if you need any more changes!
-
-
+# API Endpoints
+1. GET /bookings/{id}: Retrieve booking details by booking ID.
+2. POST /bookings: Create a new booking.
+`For more understanding view routes file in the server folder`
 
