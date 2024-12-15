@@ -16,7 +16,7 @@ const AdminPanel = () => {
     // Fetch all packages from the backend
     const fetchPackages = async () => {
         try {
-            const response = await axios.get('http://localhost:5000/admin/packages');
+            const response = await axios.get('https://travel-hub-a2m5.onrender.com/admin/packages');
             setPackages(response.data);
         } catch (err) {
             console.error(err);
@@ -39,11 +39,11 @@ const AdminPanel = () => {
         e.preventDefault();
         try {
             if (isEditing) {
-                await axios.put(`http://localhost:5000/admin/packages/${editId}`, form);
+                await axios.put(`https://travel-hub-a2m5.onrender.com/admin/packages/${editId}`, form);
                 setIsEditing(false);
                 setEditId(null);
             } else {
-                await axios.post('http://localhost:5000/admin/packages', form);
+                await axios.post('https://travel-hub-a2m5.onrender.com/admin/packages', form);
             }
             fetchPackages(); // Refresh the package list
             setForm({ title: '', description: '', price: '', availableDates: '', image: '' });
@@ -68,7 +68,7 @@ const AdminPanel = () => {
     // Handle package deletion
     const handleDelete = async (id) => {
         try {
-            await axios.delete(`http://localhost:5000/admin/packages/${id}`);
+            await axios.delete(`https://travel-hub-a2m5.onrender.com/admin/packages/${id}`);
             fetchPackages(); // Refresh the package list
         } catch (err) {
             console.error(err);
