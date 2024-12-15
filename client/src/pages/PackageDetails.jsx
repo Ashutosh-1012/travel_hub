@@ -8,7 +8,7 @@ const PackageDetails = () => {
 
     useEffect(() => {
         axios
-            .get(`http://localhost:5000/packages/${id}`)
+            .get(`https://travel-hub-a2m5.onrender.com/packages/${id}`)
             .then((res) => setPkg(res.data))
             .catch((err) => console.error(err));
     }, [id]);
