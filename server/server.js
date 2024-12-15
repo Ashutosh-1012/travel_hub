@@ -17,7 +17,7 @@ mongoose.connect('mongodb+srv://sirhello033:mmu7qb5889gy0zKJ@cluster0.kld0d.mong
 
 // Models
 const Package = require('./models/Package');
-const Booking = require('./models/Booking');
+const Booking = require('./models/booking');
 
 // Routes
 const adminRoutes = require('./routes/admin');
